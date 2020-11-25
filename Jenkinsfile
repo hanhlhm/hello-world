@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'java -version'
+                sh 'javac hello.java'
+            }
+        }
+        stage('run') {
+            steps {
+                sh 'java hello'
             }
         }
     }
